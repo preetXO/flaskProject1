@@ -4,25 +4,48 @@
     box-sizing: inherit;
 }
 
-h1 {
-    margin-bottom: 1.5rem;
-    color: #9EB23B;
+html {
+    font-family: Lato, sans-serif;
 }
 
-main {
-    max-width: 20rem;
-    margin: 2rem auto 0 auto;
+.navbar {
+    max-width: 640px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 24px
 }
 
-.body {
-    box-sizing: border-box;
+.navbar__item {
+    display: flex;
+    align-items: center;
 }
 
-.container {
-    color: orangered;
+.navbar__logo {
+    margin-right: 15px;
 }
 
-a {
-    color: green;
-    background-color: blueviolet;
+.navbar__brand {
+    display: flex;
+    align-items: center;
+}
+
+
+.navbar__navigation {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    list-style: none;
+    color: #5c6b70;
+}
+
+.navbar__navigation-item {
+    margin-left: 50px;
+}
+
+.navbar__link {
+    text-decoration: None;
+    color: inherit;
 }

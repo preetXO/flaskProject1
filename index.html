@@ -6,11 +6,12 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MicroBlog</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header class="navbar">
       <div class="navbar__brand">
-        <img src="logo.svg" alt="the microblog logo"> MicroBlog
+        <img class='navbar__logo' src="logo.svg" alt="the microblog logo"> MicroBlog
       </div>
       <ul class="navbar__navigation">
         <li class="navbar__navigation-item"><a href="#" class="navbar__link">Recent</a></li>
@@ -24,8 +25,8 @@
         <p class="form__input">
           <label for="entry" class="form__label">Entry contents</label>
           <textarea name="content" id="entry" class="form__textarea"></textarea>
+          <button type="submit" class="form__submit">Add entry</button>
         </p>
-        <button type="submit" class="form__submit">Add entry</button>
       </form>
     </section>
     <section>
@@ -47,10 +48,16 @@
           <a class="footer__item" href="#">Checkout  my github</a>
         </section>
         <section class="right">
-          <div>
-
+          <div class="footer_column">
+            <a class="footer__item" href="#">Recent</a>
+            <a class="footer__item" href="#">Calender</a>
+          </div>
+          <div class="footer_column">
+            <a class="footer__item" href="#">About</a>
+            <a class="footer__item" href="#">How this was made by me</a>
           </div>
         </section>
+      </div>
     </footer>
   </body>
 </html>
