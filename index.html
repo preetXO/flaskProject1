@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MicroBlog</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar__brand">
+        <img src="logo.svg" alt="the microblog logo"> MicroBlog
+      </div>
+      <ul class="navbar__navigation">
+        <li class="navbar__navigation-item"><a href="#" class="navbar__link">Recent</a></li>
+        <li class="navbar__navigation-item"><a href="#" class="navbar__link">Calender</a></li>
+      </ul>
+    </header>
+    <main></main>
+    <section>
+      <h1>Add new entry</h1>
+      <form action="/entry" method="post">
+        <p class="form__input">
+          <label for="entry" class="form__label">Entry contents</label>
+          <textarea name="content" id="entry" class="form__textarea"></textarea>
+        </p>
+        <button type="submit" class="form__submit">Add entry</button>
+      </form>
+    </section>
+    <section>
+      <h1>Recent posts</h1>
+      <article>
+        <div>
+          <h2> A bit of hard day today</h2>
+          <time datetime="07-08-2022">July 8</time>
+        </div>
+        <p>
+          Learnt about html and css
+        </p>
+      </article>
+    </section>
+    <footer></footer>
+  </body>
+</html>

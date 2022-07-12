@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    color: #9EB23B;
+}
+
+main {
+    max-width: 20rem;
+    margin: 2rem auto 0 auto;
+}
+
+.body {
+    box-sizing: border-box;
+}
+
+.container {
+    color: orangered;
+}
+
+a {
+    color: green;
+    background-color: blueviolet;
+}
