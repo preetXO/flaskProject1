@@ -1,11 +1,13 @@
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
 html {
     font-family: Lato, sans-serif;
+}
+
+body{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
 .navbar {
@@ -69,4 +71,31 @@ html {
 .form__label {
     display: block;
     margin-bottom: 10px;
+}
+
+.form__textarea{
+    width: 100%;
+    font-size: 10px;
+    padding: 12px 20px;
+    border: None;
+    background-color: #f3f6f6;
+    margin-bottom: 10px;
+}
+
+.form__submit {
+    background-color: #3cd0ff;
+    border: none;
+    font-weight: bold;
+    padding: 5px 30px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.form__submit:hover{
+    background-color: #18c1e1;
+}
+
+.entry {
+
 }
