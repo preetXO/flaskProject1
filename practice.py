@@ -2,7 +2,7 @@ class Book:
     TYPES = ('hardcover', 'paperback')
     def __init__(self, name, booktype, weight):
         self.name = name
-        self  .booktype = booktype
+        self.booktype = booktype
         self.weight = weight
 
     def __repr__(self):

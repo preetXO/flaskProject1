@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+  </head>
+  <body>
+    <h1>Loops in jinja</h1>
+    <h2>For loop and conditional statements</h2>
+    {% for user, os in users.items() %}
+      {% if os == 'Windows' %}
+        <p>{{ user }} is a 💻 windows user</p>
+      {% elif os == 'MacOS' %}
+        <p>{{ user }} is a macOS user</p>
+      {% else %}
+        <p>{{ user }} is a linux user</p>
+      {% endif %}
+    {% endfor %}
+  </body>
+</html>

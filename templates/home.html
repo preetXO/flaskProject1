@@ -7,12 +7,12 @@
           maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MicroBlog</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
   </head>
   <body>
     <header class="navbar">
       <div class="navbar__brand">
-        <img class='navbar__logo' src="logo.svg" alt="the micro blog logo"> MicroBlog
+        <img class='navbar__logo' src="../static/logo.svg" alt="the micro blog logo"> MicroBlog
       </div>
       <ul class="navbar__navigation">
         <li class="navbar__navigation-item"><a href="#" class="navbar__link">Recent</a></li>
@@ -22,7 +22,7 @@
     <main class="main">
     <section>
       <h1>Add new entry</h1>
-      <form action="/entry" method="post" class="form">
+      <form action="/" method="post" class="form">
         <p class="form__input">
           <label for="entry" class="form__label">Entry contents</label>
           <textarea name="content" id="entry" class="form__textarea"></textarea>
@@ -32,15 +32,17 @@
     </section>
     <section>
       <h1>Recent posts</h1>
+      {% for entry in entries %}
       <article class="entry">
         <div>
-          <h2 class="entry__title"> A bit of hard day today</h2>
-          <time class="entry__date" datetime="07-08-2022">July 8</time>
+          <h2 class="entry__title"> {{ entry[0] | truncate(30, true)}}</h2>
+          <time class="entry__date" datetime="07-08-2022">💢{{ entry[1] }}</time>
         </div>
         <p class="entry__content">
-          Learnt about html and css
+          {{ entry[0] }}
         </p>
       </article>
+      {% endfor %}
     </section>
     </main>
     <footer class="footer">
@@ -50,11 +52,11 @@
           <a class="footer__item" href="#">Checkout my github</a>
         </section>
         <section class="right">
-          <div class="footer_column">
+          <div class="footer__column">
             <a class="footer__item" href="#">Recent</a>
             <a class="footer__item" href="#">Calender</a>
           </div>
-          <div class="footer_column">
+          <div class="footer__column">
             <a class="footer__item" href="#">About</a>
             <a class="footer__item" href="#">How this was made by me</a>
           </div>

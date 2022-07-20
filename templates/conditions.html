@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Testing conditions</title>
+  </head>
+  <body>
+    <h1>Conditions in jinja 2</h1>
+    <h2>Basic components</h2>
+
+    {% if company == 'apple' %}
+    <h3>Available apple products</h3>
+    <ul>
+      <li>Iphone</li>
+      <li>ipad</li>
+      <li>imac</li>
+    </ul>
+
+    {% elif company == 'microsoft' %}
+    <h3>Available microsoft products</h3>
+    <ul>
+      <li>surface pro</li>
+      <li>xbox 360</li>
+    </ul>
+
+    {% else %}
+    <h3>No company products found</h3>
+
+    {% endif %}
+  </body>
+</html>
