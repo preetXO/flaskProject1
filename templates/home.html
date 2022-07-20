@@ -36,7 +36,7 @@
       <article class="entry">
         <div>
           <h2 class="entry__title"> {{ entry[0] | truncate(30, true)}}</h2>
-          <time class="entry__date" datetime="07-08-2022">💢{{ entry[1] }}</time>
+          <time class="entry__date" datetime="{{ entry[1] }}">●{{ entry[2] }}</time>
         </div>
         <p class="entry__content">
           {{ entry[0] }}
