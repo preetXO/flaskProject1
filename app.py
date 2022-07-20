@@ -9,8 +9,6 @@ entries = []
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    # print(vars(request))
-    # print([e for e in app.db.entries.find({})])
     if request.method == 'GET':
         [entries.append((e['content'], e['date'])) for e in app.db.entries.find({})]
     elif request.method == 'POST':
