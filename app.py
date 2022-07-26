@@ -9,18 +9,16 @@ entries = []
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    if request.method == 'GET':
-        [entries.append((e['content'], e['date'])) for e in app.db.entries.find({})]
-    elif request.method == 'POST':
+    if request.method == 'POST':
         entry_content = request.form.get('content')
         formatted_date = dt.datetime.today().strftime('%d-%m-%Y')
-        entries.append((entry_content, formatted_date))
         app.db.entries.insert_one({'content': entry_content, 'date': formatted_date})
+
     entries_with_dates = [
-        (entry[0],
-         entry[1],
-         dt.datetime.strptime(entry[1], '%d-%m-%Y').strftime('%b %d'))
-        for entry in entries
+        (entry['content'],
+         entry['date'],
+         dt.datetime.strptime(entry['date'], '%d-%m-%Y').strftime('%b %d'))
+        for entry in app.db.entries.find({})
     ]
     return render_template('home.html', entries=entries_with_dates)
 
